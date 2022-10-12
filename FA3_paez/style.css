@@ -1,0 +1,35 @@
+body {
+	background-image: url("background_image.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 400px 215px;
+}
+
+h1 {
+	text-align: center;
+	background-color:#E8C1BE;
+	font-family: Arial;
+	border: 2px dotted blue;
+	padding: 10px 15px;
+	width: 250px;
+	margin-bottom: 20px;
+}
+
+p {
+	text-align: justify;
+	font-style: italic;
+	background-color: hsl(200,30%,80%);
+	padding: 20px;
+	border-style: solid dotted double dashed;
+	border-color: black;
+	border-width: 3px;
+	width: 500px;
+}
+
+span {
+	font-weight: bold;
+	font-style: italic;
+	color: rgb(100,15,0);
+	margin-left: 2px;
+	margin-right: 5px;
+}
