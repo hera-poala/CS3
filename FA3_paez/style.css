@@ -2,7 +2,7 @@ body {
 	background-image: url("background_image.png");
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: 400px 215px;
+	background-size: cover;
 }
 
 h1 {
