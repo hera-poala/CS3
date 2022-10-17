@@ -28,10 +28,6 @@ body {
 	z-index: 3;
 }
 
-#landscape, #winston, #hopper {
-	float: left;
-}
-
 h1 {
 	position: fixed;
 	padding: 30px 20px;
