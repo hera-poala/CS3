@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Hera">
+		<title>PAEZ FA6</title>
+		<style>
+			body {
+				font-size: 25px;
+			}
+
+			#a1:link {
+				text-decoration: none;
+				background-color: darkblue;
+				color: white;
+			}
+
+			#a1:visited {
+				background-color: lightblue;
+				color: white;
+			}
+
+			#a1:hover {
+				background-color: darkblue;
+				color: yellow;
+				text-decoration: underline;
+			}
+
+			#a1:active {
+				background-color: lightblue;
+				color: black;
+			}
+
+			#a2:link {
+				text-decoration: none;
+				background-color: red;
+				color: white;
+			}
+
+			#a2:visited {
+				background-color: pink;
+				color: white;
+			}
+
+			#a2:hover {
+				background-color: red;
+				color: yellow;
+				text-decoration: underline;
+			}
+
+			#a2:active {
+				background-color: pink;
+				color: black;
+			}
+
+			div {
+				border: 1px solid black;
+				width: 100px;
+				margin: 10px;
+			}
+
+			#div1:target {
+				background-color: darkblue;
+				color: yellow;
+			}
+
+			#div2:target {
+				background-color: red;
+				color: yellow;
+				border: 10px dotted green;
+			}
+		</style>
+	</head>
+		
+	<body>
+		<a id="a1" href="#div1">First Link</a>
+		<a id="a2" href="#div2">Second Link</a>
+		
+		<div id="div1">
+			<p>Div 1 here</p>
+		</div>
+		
+		<div id="div2">
+			<p>Div 2 here</p>
+		</div>
+		
+		<p>Copyright&copy HPTPaez</p>
+	</body>
+</html>
