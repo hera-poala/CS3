@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Second Page</title>
+	</head>
+	<body>
+		<button onclick="changeImage()"></button>
+		<button onclick="returnImage()"></button>
+		<br><br>
+		<img id="image" src="img1.jfif">
+		<script>
+			function changeImage() {
+				document.getElementById("image").src = "img2.png";
+			}
+			function returnImage() {
+				document.getElementById("image").src = "img1.jfif"
+			}
+		</script>
+	
+	</body>
+</html>
