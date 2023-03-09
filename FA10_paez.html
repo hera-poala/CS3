@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>FA 10 PAEZ</title>
+	</head>
+	<body>
+		<script>
+			var num = Math.floor(Math.random() * 1000);
+			var str = num.toString();
+			var hundreds;
+			var tens;
+			var ones;
+			
+			if (str.length == 3) {
+				hundreds = str[0] * 100;
+				tens = str[1] * 10;
+				ones = str[2];
+			}
+			else if (str.length == 2) {
+				hundreds = 0;
+				tens = str[0] * 10;
+				ones = str[1];
+			}
+			else {
+				hundreds = 0
+				tens = 0;
+				ones = str[0];
+			}
+				
+			document.write("Randomly generated number: " + str + "<br>");
+			document.write("Breakdown: " + hundreds + ", " + tens + ", " + ones);
+		</script>
+	</body>
+</html>
