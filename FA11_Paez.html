@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>FA 11 PAEZ</title>
+	</head>
+	<body>
+		<script>
+			var side1 = prompt("Enter first number:");
+			var side2 = prompt("Enter second number:");
+			var side3 = prompt("Enter third number:");
+			
+			determineTriangle(side1, side2, side3);
+			
+			function determineTriangle(a, b, c){
+				if (a == b && a == c){
+					alert("Triangle is EQUILATERAL");
+				}
+				
+				else if (a == b || a == c || b == c){
+					alert("Triangle is ISOSCELES");
+				}
+				
+				else {
+					alert("Triangle is SCALENE");
+				}
+			}
+		</script>
+	</body>
+</html>
