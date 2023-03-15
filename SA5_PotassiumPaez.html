@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> My Online Shop</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="UTF-8">
+		<meta name="author" content="Hera Poala Paez">
+		<style>
+			span {color: blue; text-decoration:underline}
+			button {width: 100px; padding: 5px; background: pink;}
+		</style>
+	</head>
+	<body>
+		<h1> Welcome to Hera's Sulit Apple Lovers Shop </h1>
+		<h2> Please select from the following items </h2>
+		<ol>
+			<li> iPhone 14 Pro Max price: 100.00 </li>
+			<li> Airpods price: 250.00 </li>
+			<li> Macbook Pro price: 300.00 </li>
+		</ol>
+		<p> Item selected : <span id="item"> </span> </p>
+		<p> Qty bought : <span id="qty"> </span> </p>
+		<p> Amount to pay for the item: <span id="bill"> </span> </p>
+		<p> Current Total Bill <span id="tbill"> </span> </p>
+		<button onclick="buyItem()"> Buy an Item </button>
+		<button onclick="clearInfo()"> Clear </button>
+		
+		<script>
+			var itemNum;
+			var qty;
+			var itemName = "";
+			var itemPrice = 0.00;
+			var amountToPay = 0.00;
+			var currentTotalBill = 0.00;
+			
+			function buyItem() {
+				itemNum = parseFloat(prompt("Enter item number you want to buy:"));
+				if (itemNum < 1 || itemNum > 3 || !Number.isInteger(itemNum) ){
+					alert("Invalid item number.");
+					return;
+				}
+				qty = parseFloat(prompt("Enter the quantity:"));
+				if (!Number.isInteger(qty) || qty <= 0){
+					alert("Invalid input. Please enter a positive integer.");
+					return;
+				}
+				
+				//Get the item name and price based on the item number entered
+				switch (itemNum) {
+					case 1:
+						itemName = "iPhone 14 Pro Max";
+						itemPrice = 100.00;
+						break;
+					case 2:
+						itemName = "Airpods";
+						itemPrice = 250.00;
+						break;
+					case 3:
+						itemName = "Macbook Pro";
+						itemPrice = 300.00;
+						break;
+				}
+				
+				//Compute the amount to pay for the item
+				amountToPay = itemPrice*qty;
+				
+				//Display the item name, qty, and amount to pay
+				document.getElementById("item").innerHTML = itemName;
+				document.getElementById("qty").innerHTML = qty;
+				document.getElementById("bill").innerHTML = amountToPay.toFixed(2);
+				
+				//Update the current total bill
+				document.getElementById("tbill").innerHTML = (currentTotalBill + amountToPay).toFixed(2);
+				currentTotalBill = parseFloat(document.getElementById("tbill").innerHTML);
+			}
+			
+			//Declare function for the clear button
+			function clearInfo() {
+				//Clear all information
+				document.getElementById("item").innerHTML = "";
+				document.getElementById("qty").innerHTML = "";
+				document.getElementById("bill").innerHTML = "";
+				document.getElementById("tbill").innerHTML = "";
+				
+				currentTotalBill = 0.00;
+			}
+		</script>
+	</body>
+</html>
