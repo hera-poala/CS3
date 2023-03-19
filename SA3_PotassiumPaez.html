@@ -37,24 +37,15 @@
 	<body id="body">
 		<h2> Choose Background Color </h2>
         <ul>
-        	<li><a onclick="turnPurple()" href="#"> Purple </a></li>
-            <li><a onclick="turnNavy()" href="#"> Navy </a></li>
-            <li><a onclick="turnMaroon()" href="#"> Maroon </a></li>
+        	<li><a onclick="changeColor('purple')" href="#"> Purple </a></li>
+            <li><a onclick="changeColor('navy')" href="#"> Navy </a></li>
+            <li><a onclick="changeColor('maroon')" href="#"> Maroon </a></li>
         </ul>
 		
         <script>
-           function turnPurple() { //change body background color to purple
-			document.getElementById("body").style.backgroundColor = "purple";
+           function changeColor(colour) { // Change background colour of body
+			document.body.style.backgroundColor = colour;
 		   }
-		   
-		   function turnNavy() { //change body background color to navy
-			document.getElementById("body").style.backgroundColor = "navy";
-		   }
-		   
-		   function turnMaroon() { //change body background color to maroon
-			document.getElementById("body").style.backgroundColor = "maroon";
-		   }
-
         </script>
 	</body>
 </html>
