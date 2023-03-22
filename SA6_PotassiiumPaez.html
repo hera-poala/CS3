@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>One Time Password </title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="UTF-8">
+		<meta name="author" content="Hera Poala Paez">
+        <style>
+        	body {background: lightblue; 
+            	text-align: center;
+            	font-family: arial;
+                color: navy;
+            }
+            button {padding: 10px; background:violet }
+            a {font-size: 0.5em; color: maroon}
+        </style>
+
+	</head>
+<body onload="newOTP()">
+	<h1> Final Verification Step </h1>
+	<h2> Current OTP: <span id="otp"> _ _ _ _ _ _ <span> <a href="#" onclick="newOTP()"> New OTP </a></h2>
+    <button onclick="checkOTP()"> Enter the OTP as shown above </button>
+    
+    <script>
+    	// Generate a new OTP
+        function newOTP() {
+            var generatedOTP = "";
+            var digits = "0123456789";
+            for (var i = 0; i < 6; i++) {
+                generatedOTP += digits[Math.floor(Math.random() * 10)];
+            }
+            document.getElementById("otp").innerHTML = generatedOTP;
+        }
+        
+        // Check if the entered OTP is correct
+        function checkOTP() {
+            var enteredOTP = prompt("Enter the OTP displayed on the screen:");
+            var displayedOTP = document.getElementById("otp").innerHTML;
+            if (enteredOTP === displayedOTP) {
+                window.open("https://src.pshs.edu.ph/"); // Direct to PSHS-SRC website
+            } 
+			else {
+                alert("Invalid OTP. Please try again.");
+                newOTP();
+            }
+        }
+    </script>
+</body>
+</html>
