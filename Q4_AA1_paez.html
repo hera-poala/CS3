@@ -50,7 +50,7 @@
 					index = index + 3;
 					if (codon[i] != stop[0] && codon[i] != stop[1] && codon[i] != stop[2]){
 						if(i != rep-1){
-							document.write('"' + codon[i] + '",');
+							document.write('"' + codon[i] + '", ');
 							con = mRNA.slice(index, index + 3);
 							codon.push(con);
 						}
