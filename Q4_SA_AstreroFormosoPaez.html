@@ -1,0 +1,433 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>NCE Science Quizzer</title>
+		<style>
+			* {
+				font-family: helvatica;
+			}
+			
+			body {
+				background-color: #80daeb;
+			}
+			
+			header {
+				background-color: #001939;
+				color: white;
+				text-align: center;
+				padding: 10px;
+				margin-bottom: 15px;
+			}
+			
+			form {
+				width: 85%;
+				margin-left:6%;
+				background-color: #e0ffff;
+				padding:20px;
+				border-radius: 10px;
+				border: 2px solid #000000;
+			}
+			
+			input[type="submit"], input[type="reset"] {
+				background-color: #001939;
+				color: white;
+				padding: 8px 15px;
+				border-radius: 5px;
+				font-size: 20px;
+				border: none;
+				margin-top: 15px;
+				cursor: pointer;
+				transition: all 0.3s ease-in-out;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>NCE Science Quizzer</h1>
+		</header>
+		
+		<form id="userAns" onsubmit="return checkAns();">
+			<div id="part1">
+				<h2>Part 1: Multiple Choice</h2>
+				<h3>Instruction: Read the questions carefully and select the correct answer.</h3>
+		
+				<p>1. The darkest part of a shadow is called:</p>
+				<input type="radio" name="q1" required>a) Penumbra</input><br>
+				<input type="radio" name="q1" value="correct" required>b) Umbra</input><br>
+				<input type="radio" name="q1" required>c) Hyperumbra</input><br>
+				<input type="radio" name="q1" required>d) None of the Above</input><br>
+				<p id="check1"></p><br>
+
+
+				<p>2. It is an interaction between two organisms, in which each individual benefits from the other.</p>
+				<input type="radio" name="q2" required>a) Commensalism</input><br>
+				<input type="radio" name="q2" required>b) Parasitism</input><br>
+				<input type="radio" name="q2" value="correct" required>c) Mutualism</input><br>
+				<input type="radio" name="q2" required>d) Competition</input><br>
+				<p id="check2"></p><br>
+
+
+				<p>3. This is the fibrous tissue that connects bones to each other.</p>
+				<input type="radio" name="q3" value="correct" required>a) Ligaments</input><br>
+				<input type="radio" name="q3" required>b) Tendons</input><br>
+				<input type="radio" name="q3" required>c) Cartilage</input><br>
+				<input type="radio" name="q3" required>d) Joints</input><br>
+				<p id="check3"></p><br>
+
+				<p>4. It is the process of capturing light energy and transforming it into chemical energy.</p><br>
+				<input type="radio" name="q4" required>a) Refraction</input><br>
+				<input type="radio" name="q4" required>b) Glycolysis</input><br>
+				<input type="radio" name="q4" value="correct" required>c) Photosynthesis</input><br>
+				<input type="radio" name="q4" required>d) Photorespiration</input><br>
+				<p id="check4"></p><br>
+
+				<p>5. It is an organized structure of DNA and protein found in cells.</p><br>
+				<input type="radio" name="q5" required>a) Genes</input><br>
+				<input type="radio" name="q5" value="correct" required>b) Chromosomes</input><br>
+				<input type="radio" name="q5" required>c) Alleles</input><br>
+				<input type="radio" name="q5" required>d) Nucleus</input><br>
+				<p id="check5"></p><br>
+
+				<p>6. During sunny days, you notice that the water in the pond recedes. What could be the cause of this?</p><br>
+				<input type="radio" name="q6" value="correct" required>a) Evaporation</input><br>
+				<input type="radio" name="q6" required>b) Condensation</input><br>
+				<input type="radio" name="q6" required>c) Sublimation</input><br>
+				<input type="radio" name="q6" required>d) Freezing</input><br>
+				<p id="check6"></p><br>
+
+				<p>7. Which of the following is not essential to burning?</p><br>
+				<input type="radio" name="q7" required>a) Oxygen</input><br>
+				<input type="radio" name="q7" value="correct" required>b) Water</input><br>
+				<input type="radio" name="q7" required>c) Fuel</input><br>
+				<input type="radio" name="q7" required>d) Heat source</input><br>
+				<p id="check7"></p><br>
+
+				<p>8. It is the only planet in our solar system that rotates on a horizontal axis.</p><br>
+
+				<input type="radio" name="q8" required>a) Neptune</input><br>
+				<input type="radio" name="q8" value="correct" required>b) Uranus</input><br>
+				<input type="radio" name="q8" required>c) Venus</input><br>
+				<input type="radio" name="q8" required>d) Mars</input><br>
+				<p id="check8"></p><br>
+
+				<p>9. A simple machine formed by putting two inclined planes back to back to form a sharp edge is called a ____________.</p><br>
+				<input type="radio" name="q9" required>a) Pulley</input><br>
+				<input type="radio" name="q9" required>b) Lever</input><br>
+				<input type="radio" name="q9" required>c) Inclined plane</input><br>
+				<input type="radio" name="q9" value="correct" required>d) Wedge</input><br>
+				<p id="check9"></p><br>
+
+				<p>10. It is the source of all the energy in food chains.</p>
+				<input type="radio" name="q10" value="correct" required>a) The sun</input><br><!--answer-->
+				<input type="radio" name="q10" required>b) Green plants</input><br>
+				<input type="radio" name="q10" required>c) Photosynthesis</input><br>
+				<input type="radio" name="q10" required>d) Bacteria</input><br>
+				<p id="check10"></p><br>
+
+				<p>11. Which of the following astronomers published a controversial book proving that the Earth orbits the Sun?</p>
+				<input type="radio" name="q11" required>a) Eratosthenes</input><br>
+				<input type="radio" name="q11" required>b) Galileo</input><br>
+				<input type="radio" name="q11" value="correct" required>c) Copernicus</input><br>
+				<input type="radio" name="q11" required>d) Aristarchus</input><br>
+				<p id="check11"></p><br>
+
+				<p>12. The process of breaking white light into all the colors of the visible spectrum.</p><br>
+				<input type="radio" name="q12" required>a) Reflection</input><br>
+				<input type="radio" name="q12" value="correct" required>b) Refraction</input><br>
+				<input type="radio" name="q12" required>c) Radiation</input><br>
+				<input type="radio" name="q12" required>d) Photosynthesis</input><br>
+				<p id="check12"></p><br>
+
+				<p>13. Which is a measurement of the amount of material contained in a particular object?</p><br>
+				<input type="radio" name="q13" value="correct" required>a) Mass</input><br>
+				<input type="radio" name="q13" required>b) Energy</input><br>
+				<input type="radio" name="q13" required>c) Weight</input><br>
+				<input type="radio" name="q13" required>d) Gravity</input><br>
+				<p id="check13"></p><br>
+
+				<p>14. Coal, oil, and natural gas are what types of fuel?</p><br>
+				<input type="radio" name="q14" required>a) Natural</input><br>
+				<input type="radio" name="q14" value="correct" required>b) Fossil</input><br>
+				<input type="radio" name="q14" required>c) Atomic</input><br>
+				<input type="radio" name="q14" required>d) Nuclear</input><br>
+				<p id="check14"></p><br>
+			  
+				<p>15. What is the correct order of The Scientific Method?</p>
+				<ol>
+				  <li>Formulate Hypothesis</li>
+				  <li>Collect Data</li>
+				  <li>Draw Conclusion</li>
+				  <li>Analyze Data</li>
+				  <li>Design Experiment</li>
+				  <li>State Problem</li>
+				</ol><br>
+
+				<input type="radio" name="q15" required>a) 2 - 1 - 6 - 4 - 3 - 5</input><br>
+				<input type="radio" name="q15" required>b) 6 - 1 - 2 - 4 - 5 - 3</input><br>
+				<input type="radio" name="q15" value="correct" required>c) 6 - 1 - 5 - 2 - 4 - 3</input><br>
+				<input type="radio" name="q15" required>d) 1 - 6 - 2 - 5 - 3 - 4</input><br>
+				<p id="check15"></p><br>
+			</div>
+			<br>
+			<div id="part2">
+				<h2>Part 2: Identification</h2>
+				<h3>Instruction: Read the statements carefully and fill in the correct answer. Use proper capitalization.</h3>
+		
+				<p>16. The <input type="text" required name="q16"> is the basic unit of matter.</p>
+				<p id="check16"></p><br>
+	  
+				<p>17. The <input type="text" required name="q17"> galaxy is the galaxy that includes the Solar System, with the name describing the galaxy's appearance from Earth: a hazy band of light seen in the night sky formed from stars that cannot be individually distinguished by the naked eye.</p>
+				<p id="check17"></p><br>
+				
+				<p>18. <input type="text" required name="q18"> is the first element in the periodic table. It has atomic number 1 and is placed in group 1 along with alkali metals.</p>
+				<p id="check18"></p><br>
+				
+				<p>19. The <input type="text" required name="q19"> is the part of the brain responsible for integrating sensory impulses, directing motor activity, and controlling higher intellectual functions.</p>
+				<p id="check19"></p><br>
+				
+				<p>20. The <input type="text" required name="q20"> is a tool that measures the strength or magnitude of an earthquake.</p>
+				<p id="check20"></p><br>
+			</div>
+			
+			<h2 id="userScore"></h2>
+			<input type="submit" value="Submit">
+			<input type="reset" onclick="resetButton()" value="Reset">
+		</form>
+		
+		<script>
+			function checkAns() {
+				var score = 0;
+				//check q1
+				if(userAns.q1.value == "correct") {
+					check1.innerHTML = "Your answer is correct!";
+					document.getElementById("check1").style.color = "green";
+					score++;
+				} 
+				else {
+					check1.innerHTML = "Your answer is incorrect. The correct answer is B.";
+					document.getElementById("check1").style.color = "red";
+					}
+				//check q2
+				if(userAns.q2.value == "correct") {
+					check2.innerHTML = "Your answer is correct!";
+					document.getElementById("check2").style.color = "green";
+					score++;
+				} 
+				else {
+					check2.innerHTML = "Your answer is incorrect. The correct answer is C.";
+					document.getElementById("check2").style.color = "red";
+				}
+				//check q3
+				if(userAns.q3.value == "correct") {
+					check3.innerHTML = "Your answer is correct!";
+					document.getElementById("check3").style.color = "green";
+					score++;
+				} 
+				else {
+					check3.innerHTML = "Your answer is incorrect. The correct answer is A.";
+					document.getElementById("check3").style.color = "red";
+				}
+				//check q4
+				if(userAns.q4.value == "correct") {
+					check4.innerHTML = "Your answer is correct!";
+					document.getElementById("check4").style.color = "green";
+					score++;
+				} 
+				else {
+					check4.innerHTML = "Your answer is incorrect. The correct answer is C.";
+					document.getElementById("check4").style.color = "red";
+				}
+				//check q5
+				if(userAns.q5.value == "correct") {
+					check5.innerHTML = "Your answer is correct!";
+					document.getElementById("check5").style.color = "green";
+					score++;
+				} 
+				else {
+					check5.innerHTML = "Your answer is incorrect. The correct answer is B.";
+					document.getElementById("check5").style.color = "red";
+				}
+				//check q6
+				if(userAns.q6.value == "correct") {
+					check6.innerHTML = "Your answer is correct!";
+					document.getElementById("check6").style.color = "green";
+					score++;
+				} 
+				else {
+					check6.innerHTML = "Your answer is incorrect. The correct answer is A.";
+					document.getElementById("check6").style.color = "red";
+				}
+				//check q7
+				if(userAns.q7.value == "correct") {
+					check7.innerHTML = "Your answer is correct!";
+					document.getElementById("check7").style.color = "green";
+					score++;
+				} 
+				else {
+					check7.innerHTML = "Your answer is incorrect. The correct answer is B.";
+					document.getElementById("check7").style.color = "red";
+				}
+				//check q8
+				if(userAns.q8.value == "correct") {
+					check8.innerHTML = "Your answer is correct!";
+					document.getElementById("check8").style.color = "green";
+					score++;
+				} 
+				else {
+					check8.innerHTML = "Your answer is incorrect. The correct answer is B.";
+					document.getElementById("check8").style.color = "red";
+				}
+				//check q9
+				if(userAns.q9.value == "correct") {
+					check9.innerHTML = "Your answer is correct!";
+					document.getElementById("check9").style.color = "green";
+					score++;
+				} 
+				else {
+					check9.innerHTML = "Your answer is incorrect. The correct answer is D.";
+					document.getElementById("check9").style.color = "red";
+				}
+				//check q10
+				if(userAns.q10.value == "correct") {
+					check10.innerHTML = "Your answer is correct!";
+					document.getElementById("check10").style.color = "green";
+					score++;
+				} 
+				else {
+					check10.innerHTML = "Your answer is incorrect. The correct answer is A.";
+					document.getElementById("check10").style.color = "red";
+				}
+				//check q11
+				if(userAns.q11.value == "correct") {
+					check11.innerHTML = "Your answer is correct!";
+					document.getElementById("check11").style.color = "green";
+					score++;
+				} 
+				else {
+					check11.innerHTML = "Your answer is incorrect. The correct answer is C.";
+					document.getElementById("check11").style.color = "red";
+				}
+				//check q12
+				if(userAns.q12.value == "correct") {
+					check12.innerHTML = "Your answer is correct!";
+					document.getElementById("check12").style.color = "green";
+					score++;
+				} 
+				else {
+					check12.innerHTML = "Your answer is incorrect. The correct answer is B.";
+					document.getElementById("check12").style.color = "red";
+				}
+				//check q13
+				if(userAns.q13.value == "correct") {
+					check13.innerHTML = "Your answer is correct!";
+					document.getElementById("check13").style.color = "green";
+					score++;
+				} 
+				else {
+					check13.innerHTML = "Your answer is incorrect. The correct answer is A.";
+					document.getElementById("check13").style.color = "red";
+				}
+				//check q14
+				if(userAns.q14.value == "correct") {
+					check14.innerHTML = "Your answer is correct!";
+					document.getElementById("check14").style.color = "green";
+					score++;
+				} 
+				else {
+					check14.innerHTML = "Your answer is incorrect. The correct answer is B.";
+					document.getElementById("check14").style.color = "red";
+				}
+				//check q15
+				if(userAns.q15.value == "correct") {
+					check15.innerHTML = "Your answer is correct!";
+					document.getElementById("check15").style.color = "green";
+					score++;
+				} 
+				else {
+					check15.innerHTML = "Your answer is incorrect. The correct answer is C.";
+					document.getElementById("check15").style.color = "red";
+				}
+				
+				//check q16
+				if(userAns.q16.value == "atom") {
+					check16.innerHTML = "Your answer is correct!";
+					document.getElementById("check16").style.color = "green";
+					score++;
+				} 
+				else {
+					check16.innerHTML = "Your answer is incorrect. The correct answer is atom.";
+					document.getElementById("check16").style.color = "red";
+				}
+				//check q17
+				if(userAns.q17.value == "Milky Way") {
+					check17.innerHTML = "Your answer is correct!";
+					document.getElementById("check17").style.color = "green";
+					score++;
+				} 
+				else {
+					check17.innerHTML = "Your answer is incorrect. The correct answer is Milky Way.";
+					document.getElementById("check17").style.color = "red";
+				}
+				//check q18
+				if(userAns.q18.value == "Hydrogen") {
+					check18.innerHTML = "Your answer is correct!";
+					document.getElementById("check18").style.color = "green";
+					score++;
+				} 
+				else {
+					check18.innerHTML = "Your answer is incorrect. The correct answer is Hydrogen.";
+					document.getElementById("check18").style.color = "red";
+				}
+				//check q19
+				if(userAns.q19.value == "cerebrum") {
+					check19.innerHTML = "Your answer is correct!";
+					document.getElementById("check19").style.color = "green";
+					score++;
+				} 
+				else {
+					check19.innerHTML = "Your answer is incorrect. The correct answer is cerebrum.";
+					document.getElementById("check19").style.color = "red";
+				}
+				//check q20
+				if(userAns.q20.value == "Richter Scale" || userAns.q20.value == "Richter scale") {
+					check20.innerHTML = "Your answer is correct!";
+					document.getElementById("check20").style.color = "green";
+					score++;
+				} 
+				else {
+					check20.innerHTML = "Your answer is incorrect. The correct answer is Richter Scale.";
+					document.getElementById("check20").style.color = "red";
+				}
+				
+				document.getElementById("userScore").innerHTML = "Your Score: " + score + "/20";
+				
+				return false;
+			}
+			
+			function resetButton() {
+				document.getElementById("check1").innerHTML = "";
+				document.getElementById("check2").innerHTML = "";
+				document.getElementById("check3").innerHTML = "";
+				document.getElementById("check4").innerHTML = "";
+				document.getElementById("check5").innerHTML = "";
+				document.getElementById("check6").innerHTML = "";
+				document.getElementById("check7").innerHTML = "";
+				document.getElementById("check8").innerHTML = "";
+				document.getElementById("check9").innerHTML = "";
+				document.getElementById("check10").innerHTML = "";
+				document.getElementById("check11").innerHTML = "";
+				document.getElementById("check12").innerHTML = "";
+				document.getElementById("check13").innerHTML = "";
+				document.getElementById("check14").innerHTML = "";
+				document.getElementById("check15").innerHTML = "";
+				document.getElementById("check16").innerHTML = "";
+				document.getElementById("check17").innerHTML = "";
+				document.getElementById("check18").innerHTML = "";
+				document.getElementById("check19").innerHTML = "";
+				document.getElementById("check20").innerHTML = "";
+				document.getElementById("userScore").innerHTML = "";
+			}
+		</script>
+	</body>
+</html>
